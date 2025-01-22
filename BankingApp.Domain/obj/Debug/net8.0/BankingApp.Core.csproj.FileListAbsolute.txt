@@ -1,0 +1,12 @@
+D:\dotnet\BankingApp.Api\BankingApp.Domain\bin\Debug\net8.0\BankingApp.Core.deps.json
+D:\dotnet\BankingApp.Api\BankingApp.Domain\bin\Debug\net8.0\BankingApp.Core.dll
+D:\dotnet\BankingApp.Api\BankingApp.Domain\bin\Debug\net8.0\BankingApp.Core.pdb
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.csproj.AssemblyReference.cache
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.AssemblyInfoInputs.cache
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.AssemblyInfo.cs
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.csproj.CoreCompileInputs.cache
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.dll
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\refint\BankingApp.Core.dll
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.pdb
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\ref\BankingApp.Core.dll

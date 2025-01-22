@@ -1,0 +1,17 @@
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Infrastructure.deps.json
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Infrastructure.dll
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Infrastructure.pdb
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Core.dll
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Core.pdb
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.csproj.AssemblyReference.cache
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.AssemblyInfoInputs.cache
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.AssemblyInfo.cs
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.csproj.CoreCompileInputs.cache
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingA.90A18F1F.Up2Date
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.dll
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\refint\BankingApp.Infrastructure.dll
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.pdb
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\ref\BankingApp.Infrastructure.dll
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Infrastructure.runtimeconfig.json
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.genruntimeconfig.cache

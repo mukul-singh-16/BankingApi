@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hp9ePxrG544=",
+  "success": true,
+  "projectFilePath": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\BankingApp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mukul\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.1\\microsoft.extensions.dependencyinjection.abstractions.9.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

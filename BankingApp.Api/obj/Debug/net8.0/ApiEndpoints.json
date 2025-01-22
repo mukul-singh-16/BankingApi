@@ -1,0 +1,175 @@
+[
+  {
+    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
+    "Method": "GetTransactionHistory",
+    "RelativePath": "api/Transaction/{userId}/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
+    "Method": "AddBalance",
+    "RelativePath": "api/Transaction/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "amount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
+    "Method": "RemoveBalance",
+    "RelativePath": "api/Transaction/remove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "amount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
+    "Method": "TransferBalance",
+    "RelativePath": "api/Transaction/transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromUserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "toUserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "amount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "GetAllUsersAsync",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "AddUserAsync",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BankingApp.Core.Entities.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "GetUserByIdAsync",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "UpdateUserAsync",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "BankingApp.Core.Entities.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "DeleteUserAsync",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

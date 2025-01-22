@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "OMTk+FTpAQ8tfCjrYcJ9g82O7a/oVRJVNKISDSZRnh0=",
+  "Source": "BankingApp.Api",
+  "BasePath": "_content/BankingApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
