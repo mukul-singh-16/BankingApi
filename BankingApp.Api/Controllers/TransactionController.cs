@@ -17,11 +17,11 @@ namespace BankingApp.Api.Controllers
 
 
         //[HttpGet]
-        //public async Task<IActionResult> Hello()
-        //{
+        // public async Task<IActionResult> Hello()
+        // {
             
         //    return Ok("hello");
-        //}
+        // }
 
         [HttpPost("transfer")]
         public async Task<IActionResult> TransferBalance([FromQuery] Guid fromUserId, [FromQuery] Guid toUserId, [FromQuery] decimal amount)
@@ -61,19 +61,22 @@ namespace BankingApp.Api.Controllers
             return BadRequest("Failed to remove balance.");
         }
 
+
+        
+
         [HttpGet("{userId}/history")]
-public async Task<IActionResult> GetTransactionHistory(Guid userId, [FromQuery] int page = 1, [FromQuery] int pageSize = 3)
-{
-    if (page <= 0 || pageSize <= 0)
-        return BadRequest("Page and PageSize must be greater than zero.");
+        public async Task<IActionResult> GetTransactionHistory(Guid userId, [FromQuery] int page = 1, [FromQuery] int pageSize = 3)
+        {
+            if (page <= 0 || pageSize <= 0)
+                return BadRequest("Page and PageSize must be greater than zero.");
 
-    var transactions = await _transactionRepository.GetTransactionHistoryAsync(userId, page, pageSize);
-    
-    if (!transactions.Any())
-        return NotFound("No transactions found for the user.");
+            var transactions = await _transactionRepository.GetTransactionHistoryAsync(userId, page, pageSize);
+            
+            if (!transactions.Any())
+                return NotFound("No transactions found for the user.");
 
-    return Ok(transactions);
-}
+            return Ok(transactions);
+        }
 
-    }
-}
+            }
+        }

@@ -1,0 +1,82 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# User-specific Files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vsp
+
+# Rider Project Files
+.idea/
+.idea_modules/
+
+# Logs
+*.log
+
+# Visual Studio specific
+.vscode/
+.vs/
+
+# Generated files
+*.g.*
+*.g.cs
+*.g.i.*
+*.dll
+*.pdb
+*.exe
+*.cache
+*.ilk
+*.lib
+*.tmp
+*.csproj.user
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+# If using the new NuGet format, exclude package lock file
+.nuget/packages/
+project.lock.json
+project.fragment.lock.json
+
+# NPM Packages (if used)
+node_modules/
+
+# Coverage Results
+*.coverage
+*.coveragexml
+.coverage/
+
+# Publish Outputs
+.publish/
+
+# Backup Files
+*.bak
+*.swp
+
+# IDE Configurations
+*.ideconfig
+*.Rproj.user/
+
+# Resharper Files
+_ReSharper*/
+*.DotSettings.user
+
+# Dotnet Runtime
+*.runtimeconfig.json
+
+# Secrets and Keys
+secrets.json
+*.pfx
+
+# Dependency Graph Cache
+*.deps.json
+*.runtimeconfig.dev.json
+
+# Local Dev Settings
+appsettings.Development.json
+appsettings.Local.json

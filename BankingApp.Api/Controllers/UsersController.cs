@@ -1,4 +1,4 @@
-﻿using BankingApp.Core.Entities;
+﻿using BankingApp.Core.DTOs;
 using BankingApp.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

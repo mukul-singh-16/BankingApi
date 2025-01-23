@@ -1,0 +1,17 @@
+[
+    {
+        "id": "fa9c3492-bc63-4146-b7e5-faa6b3c2d21f",
+        "name": "Aryan",
+        "balance": 1010.00
+    },
+    {
+        "id": "20a99305-b512-43da-8093-b734b15d9a71",
+        "name": "Nitin",
+        "balance": 1210.50
+    },
+    {
+        "id": "370c7aa7-1455-423a-8c74-03181a6de4f1",
+        "name": "Mukul",
+        "balance": 2189.50
+    }
+]

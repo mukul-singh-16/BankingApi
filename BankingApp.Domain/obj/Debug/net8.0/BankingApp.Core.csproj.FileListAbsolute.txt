@@ -10,3 +10,4 @@ D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.dll
 D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\refint\BankingApp.Core.dll
 D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.pdb
 D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\ref\BankingApp.Core.dll
+D:\dotnet\BankingApp.Api\BankingApp.Domain\obj\Debug\net8.0\BankingApp.Core.sourcelink.json

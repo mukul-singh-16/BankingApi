@@ -1,5 +1,4 @@
 ﻿using BankingApp.Application;
-using BankingApp.Core;
 using BankingApp.Infrastructure;
 
 namespace BankingApp.Api

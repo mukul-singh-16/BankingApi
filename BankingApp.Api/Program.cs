@@ -13,12 +13,6 @@ namespace BankingApp.Api
 
 
             builder.Services.AddControllers();
-            //.AddNewtonsoftJson(options =>
-            //{
-            //    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            //});
-
-
             //Console.WriteLine("program cs 1");
 
             builder.Services.AddEndpointsApiExplorer();
@@ -26,7 +20,7 @@ namespace BankingApp.Api
 
             var app = builder.Build();
 
-            //Configure the HTTP request pipeline.
+            
              if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

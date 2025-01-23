@@ -1,4 +1,5 @@
-﻿using BankingApp.Core.Entities;
+﻿using BankingApp.Core.DTOs;
+using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
 using BankingApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +14,11 @@ namespace BankingApp.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<UserEntity>> GetUsers()
+        public async Task<IEnumerable<UserDto>> GetUsers()
         {
-            return await _dbContext.Users.ToListAsync();
+            return await _dbContext.Users
+                .Select(user => new UserDto(user.Name))
+                .ToListAsync();
         }
 
         public async Task<UserEntity> GetUsersByIdAsync(Guid id)
@@ -25,7 +28,7 @@ namespace BankingApp.Infrastructure.Repositories
 
         public async Task<UserEntity> AddUserAsync(UserRequest user)
         {
-            UserEntity newUser = new(Guid.NewGuid(),user.Name,user.Balance);
+            UserEntity newUser = new(Guid.NewGuid(),user.Name,0);
          
             _dbContext.Users.Add(newUser);
             await _dbContext.SaveChangesAsync();
@@ -46,7 +49,6 @@ namespace BankingApp.Infrastructure.Repositories
                
 
             user.Name = updatedUser.Name;
-            user.Balance = updatedUser.Balance;
 
 
             await _dbContext.SaveChangesAsync();
