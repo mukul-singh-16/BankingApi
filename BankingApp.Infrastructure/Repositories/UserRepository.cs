@@ -1,4 +1,5 @@
-﻿using BankingApp.Core.DTOs;
+﻿using BankingApp.Application.DTOs;
+using BankingApp.Core.DTOs;
 using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
 using BankingApp.Infrastructure.Data;
@@ -6,30 +7,31 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BankingApp.Infrastructure.Repositories
 {
-    public class UserRepository : IUserRepository  {
-        private readonly BankingAppContext _dbContext;
+    public class UserRepository(AppDbContext _dbContext ) : IUserRepository  {
+        
 
-        public UserRepository(BankingAppContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
-        public async Task<IEnumerable<UserDto>> GetUsers()
+        public async Task<IEnumerable<UserEntity>> GetUsers( PaginationDtos pagination)
         {
             return await _dbContext.Users
-                .Select(user => new UserDto(user.Name))
-                .ToListAsync();
+            .Skip((pagination.page - 1) * pagination.pageSize)
+            .Take(pagination.pageSize)
+            .ToListAsync();
         }
+
+
 
         public async Task<UserEntity> GetUsersByIdAsync(Guid id)
         {
             return await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<UserEntity> AddUserAsync(UserRequest user)
+
+
+
+        public async Task<UserEntity> AddUserAsync(UserRequestDtos req)
         {
-            UserEntity newUser = new(Guid.NewGuid(),user.Name,0);
-         
+
+            UserEntity newUser = new UserEntity(Guid.NewGuid(),req.username,req.password,0);
             _dbContext.Users.Add(newUser);
             await _dbContext.SaveChangesAsync();
 
@@ -39,32 +41,20 @@ namespace BankingApp.Infrastructure.Repositories
 
         
 
-        public async Task<UserEntity> UpdateUserAsync(Guid userId, UserRequest updatedUser)
+        public async Task<UserEntity> UpdateUserAsync(UserEntity user, UserRequestDtos req)
         {
-            var user = await GetUsersByIdAsync(userId);
-
-            if (user == null) 
-                return null;
-
-               
-
-            user.Name = updatedUser.Name;
-
-
+            user.Username = req.username;
             await _dbContext.SaveChangesAsync();
-
             return user;
         }
 
-        public async Task<bool> DeleteUserAsync(Guid userId)
-        {
-            var user = await GetUsersByIdAsync(userId);
-            if (user == null) return false;
 
+
+        public async Task<bool> DeleteUserAsync(UserEntity user)
+        {
             _dbContext.Users.Remove(user);
             return await _dbContext.SaveChangesAsync() > 0;
         }
-
-        
+       
     }
 }

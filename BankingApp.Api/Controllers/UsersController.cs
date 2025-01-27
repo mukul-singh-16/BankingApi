@@ -1,50 +1,65 @@
-﻿using BankingApp.Core.DTOs;
+﻿using Azure.Core;
+using BankingApp.Application.Commands;
+using BankingApp.Application.DTOs;
+using BankingApp.Application.Queries;
+using BankingApp.Core.DTOs;
+using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankingApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController(ISender sender) : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        //private readonly IUserRepository _userRepository;
 
-        public UsersController(IUserRepository userRepository)
-        {
-            Console.WriteLine("users");
-            _userRepository = userRepository;
-        }
+        //public UsersController(IUserRepository userRepository)
+        //{
+        //    Console.WriteLine("users");
+        //    _userRepository = userRepository;
+        //}
 
 
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAllUsersAsync()
+        public async Task<IActionResult> GetAllUsersAsync([FromQuery] int page =1  , [FromQuery] int pageSize = 10)
         {
-            var users = await _userRepository.GetUsers();
-            return Ok(users);
 
+            if (page <= 0 || pageSize <= 0)
+                throw new Exception(message: "pagination data is incorrect check it again");
+
+            var users = await sender.Send(new GetAllUserQuery(new PaginationDtos((int)page, (int)pageSize)));
+
+            
+            return Ok(users);
         }
 
-        [HttpGet("{id:guid}")]
-        public async Task<IActionResult> GetUserByIdAsync(Guid id)
+
+
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetUserByIdAsync([FromRoute] Guid userId)
         {
-            var user = await _userRepository.GetUsersByIdAsync(id);
+            var user = await sender.Send(new GetUserByIdQuery(userId));
+
             if (user == null)
             {
-                return NotFound($"User with ID {id} not found.");
+                return NotFound($"User with ID {userId} not found.");
             }
             return Ok(user);
         }
 
-        
-        
+
+
 
 
         [HttpPost]
-        public async Task<IActionResult> AddUserAsync([FromBody] UserRequest user)
+        public async Task<IActionResult> AddUserAsync([FromBody] UserRequestDtos user)
         {
+
             if (user == null)
             {
                 return BadRequest("User data cannot be null.");
@@ -52,11 +67,11 @@ namespace BankingApp.Api.Controllers
 
             try
             {
-                var newUser = await _userRepository.AddUserAsync(user);
+                var result = await sender.Send(new AddUserCommand(user));
 
-                return Ok(newUser);
+                return Ok(result);
 
-                
+
             }
             catch (Exception ex)
             {
@@ -66,8 +81,8 @@ namespace BankingApp.Api.Controllers
 
         
 
-        [HttpPut("{id:guid}")]
-        public async Task<IActionResult> UpdateUserAsync(Guid id, [FromBody] UserRequest user)
+        [HttpPut("{userId:guid}")]
+        public async Task<IActionResult> UpdateUserAsync([FromRoute] Guid userId, [FromBody] UserRequestDtos user)
         {
             if (user == null)
             {
@@ -76,11 +91,11 @@ namespace BankingApp.Api.Controllers
 
             try
             {
-                var updatedUser = await _userRepository.UpdateUserAsync(id, user);
+                var updatedUser = await sender.Send(new UpdateUserCommand(userId, user));
 
                 if (updatedUser == null)
                 {
-                    return NotFound($"User with ID {id} not found.");
+                    return NotFound($"User with ID {userId} not found.");
                 }
 
                 return Ok(updatedUser);
@@ -92,16 +107,17 @@ namespace BankingApp.Api.Controllers
         }
 
 
-        [HttpDelete("{id:guid}")]
-        public async Task<IActionResult> DeleteUserAsync(Guid id)
+        [HttpDelete("{userId:guid}")]
+        public async Task<IActionResult> DeleteUserAsync([FromRoute] Guid userId)
         {
-            bool result = await _userRepository.DeleteUserAsync(id);
+            bool result = await sender.Send(new DeleteUserCommand(userId));
 
-            if(result)
+            if (result)
             {
                 return NoContent();
             }
-            return NotFound($"User with ID {id} not found.");
+
+            return NotFound($"User with ID {userId} not found.");
         }
     }
 }

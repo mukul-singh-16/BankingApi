@@ -1,17 +1,120 @@
-[
-    {
-        "id": "fa9c3492-bc63-4146-b7e5-faa6b3c2d21f",
-        "name": "Aryan",
-        "balance": 1010.00
-    },
-    {
-        "id": "20a99305-b512-43da-8093-b734b15d9a71",
-        "name": "Nitin",
-        "balance": 1210.50
-    },
-    {
-        "id": "370c7aa7-1455-423a-8c74-03181a6de4f1",
-        "name": "Mukul",
-        "balance": 2189.50
-    }
+﻿[
+  {
+    "id": "fa9c3492-bc63-4146-b7e5-faa6b3c2d21f",
+    "name": "Aryan",
+    "balance": 1010
+  },
+  {
+    "id": "20a99305-b512-43da-8093-b734b15d9a71",
+    "name": "Nitin",
+    "balance": 1210.5
+  },
+  {
+    "id": "370c7aa7-1455-423a-8c74-03181a6de4f1",
+    "name": "Mukul Singh",
+    "balance": 2189.5
+  },
+  {
+    "id": "e462cf8b-9e86-4216-918b-9b48282e9e4f",
+    "name": "Mukul",
+    "balance": 0
+  }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BankingApp/
+│
+├── BankingApp.sln
+│
+├── src/
+│   ├── BankingApp.Application/
+│   │   ├── Commands/
+│   │   │   ├── CreateAccountCommand.cs
+│   │   │   ├── TransferFundsCommand.cs
+│   │   │   └── DeleteAccountCommand.cs
+│   │   ├── CommandHandlers/
+│   │   │   ├── CreateAccountCommandHandler.cs
+│   │   │   ├── TransferFundsCommandHandler.cs
+│   │   │   └── DeleteAccountCommandHandler.cs
+│   │   ├── Queries/
+│   │   │   ├── GetAccountDetailsQuery.cs
+│   │   │   └── GetTransactionHistoryQuery.cs
+│   │   ├── QueryHandlers/
+│   │   │   ├── GetAccountDetailsQueryHandler.cs
+│   │   │   └── GetTransactionHistoryQueryHandler.cs
+│   │   ├── DTOs/
+│   │   │   ├── AccountDTO.cs
+│   │   │   └── TransactionDTO.cs
+│   │   └── Services/
+│   │       ├── AccountService.cs
+│   │       └── TransactionService.cs
+│   │
+│   ├── BankingApp.Domain/
+│   │   ├── Entities/
+│   │   │   ├── Account.cs
+│   │   │   └── Transaction.cs
+│   │   ├── Repositories/
+│   │   │   ├── IAccountRepository.cs
+│   │   │   └── ITransactionRepository.cs
+│   │   └── ValueObjects/
+│   │       ├── Money.cs
+│   │       └── AccountNumber.cs
+│   │
+│   ├── BankingApp.Infrastructure/
+│   │   ├── Database/
+│   │   │   ├── Migrations/
+│   │   │   └── Models/
+│   │   │       ├── AccountModel.cs
+│   │   │       └── TransactionModel.cs
+│   │   ├── Middleware/
+│   │   │   ├── AuthMiddleware.cs
+│   │   │   └── ErrorHandlingMiddleware.cs
+│   │   └── ExternalServices/
+│   │       ├── NotificationService.cs
+│   │       └── PaymentGateway.cs
+│   │
+│   ├── BankingApp.API/
+│   │   ├── Controllers/
+│   │   │   ├── AccountController.cs
+│   │   │   └── TransactionController.cs
+│   │   ├── Routes/
+│   │   │   ├── AccountRoutes.cs
+│   │   │   └── TransactionRoutes.cs
+│   │   └── Startup.cs
+│   │
+│   ├── BankingApp.Config/
+│   │   ├── DatabaseConfig.cs
+│   │   ├── ServerConfig.cs
+│   │   └── AuthConfig.cs
+│   │
+│   └── BankingApp.Tests/
+│       ├── Application/
+│       │   ├── Commands/
+│       │   ├── Queries/
+│       │   └── Services/
+│       ├── Domain/
+│       │   ├── Entities/
+│       │   └── Repositories/
+│       ├── Infrastructure/
+│       │   ├── Database/
+│       │   └── ExternalServices/
+│       └── API/
+│           ├── Controllers/
+│           └── Routes/
+│
+└── README.md

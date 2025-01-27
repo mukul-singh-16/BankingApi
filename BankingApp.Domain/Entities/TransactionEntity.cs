@@ -9,10 +9,10 @@ namespace BankingApp.Core.Entities
     public class TransactionEntity
     {
         public Guid Id { get; set; } 
-        public Guid FromUserId { get; set; } 
-        public Guid ToUserId { get; set; } 
+        public Guid ? FromUserId { get; set; } 
+        public Guid ? ToUserId { get; set; } 
         public decimal Amount { get; set; } 
         public DateTime Date { get; set; } 
-        public string Type { get; set; } // Type of transaction: "Transfer", "Add", "Remove"
+        public string Type { get; set; } // Type of transaction: "Transfer", "Add", "Remove"   enum create krna hai 
     }
 }

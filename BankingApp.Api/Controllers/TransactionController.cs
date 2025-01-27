@@ -1,47 +1,50 @@
-﻿using BankingApp.Core.Interfaces;
+﻿using BankingApp.Application.Commands;
+using BankingApp.Application.DTOs;
+using BankingApp.Application.Queries;
+using BankingApp.
+    Core.DTOs;
+using BankingApp.Core.Interfaces;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankingApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TransactionController : ControllerBase
+    public class TransactionController(ISender sender) : ControllerBase
     {
-        private readonly ITransactionRepository _transactionRepository;
 
-        public TransactionController(ITransactionRepository transactionRepository)
+        [HttpGet]
+        public async Task<IActionResult> Hello()
         {
-            //Console.WriteLine("transactionrepo");
-            _transactionRepository = transactionRepository;
+            return Ok("hello");
         }
 
 
-        //[HttpGet]
-        // public async Task<IActionResult> Hello()
-        // {
-            
-        //    return Ok("hello");
-        // }
 
         [HttpPost("transfer")]
-        public async Task<IActionResult> TransferBalance([FromQuery] Guid fromUserId, [FromQuery] Guid toUserId, [FromQuery] decimal amount)
+        public async Task<IActionResult> TransferBalance([FromBody] TransferBalanceDtos body )
         {
-            if (amount <= 0)
-                return BadRequest("Amount must be greater than zero.");
+            
+            var success = await sender.Send( new TransferBalanceCommand(body));
 
-            var success = await _transactionRepository.TransferBalanceAsync(fromUserId, toUserId, amount);
             if (success)
                 return Ok("Transfer successful.");
+
             return BadRequest("Transfer failed.");
         }
 
+
+
+
+       
         [HttpPost("add")]
-        public async Task<IActionResult> AddBalance([FromQuery] Guid userId, [FromQuery] decimal amount)
+        public async Task<IActionResult> AddBalance([FromBody] BalanceRequestDtos body)
         {
-            if (amount <= 0)
+            if (body.Amount <= 0)
                 return BadRequest("Amount must be greater than zero.");
 
-            bool success = await _transactionRepository.AddBalanceAsync(userId, amount);
+            bool success = await sender.Send(new RemoveBalanceCommand(body.UserId,body.Amount));
             if (success)
                 return Ok("Balance added successfully.");
 
@@ -49,28 +52,28 @@ namespace BankingApp.Api.Controllers
         }
 
         [HttpPost("remove")]
-        public async Task<IActionResult> RemoveBalance([FromQuery] Guid userId, [FromQuery] decimal amount)
+        public async Task<IActionResult> RemoveBalance([FromBody] BalanceRequestDtos body)
         {
-
-            if (amount <= 0)
+            if (body.Amount <= 0)
                 return BadRequest("Amount must be greater than zero.");
 
-            var success = await _transactionRepository.RemoveBalanceAsync(userId, amount);
+            var success = await sender.Send(new RemoveBalanceCommand(body.UserId, body.Amount));
             if (success)
                 return Ok("Balance removed successfully.");
+
             return BadRequest("Failed to remove balance.");
         }
 
 
-        
+
 
         [HttpGet("{userId}/history")]
-        public async Task<IActionResult> GetTransactionHistory(Guid userId, [FromQuery] int page = 1, [FromQuery] int pageSize = 3)
+        public async Task<IActionResult> GetTransactionHistory(Guid userId, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             if (page <= 0 || pageSize <= 0)
                 return BadRequest("Page and PageSize must be greater than zero.");
 
-            var transactions = await _transactionRepository.GetTransactionHistoryAsync(userId, page, pageSize);
+            var transactions = await  sender.Send(new GetTransactionHistoryQuery(userId, new PaginationDtos(page, pageSize)));
             
             if (!transactions.Any())
                 return NotFound("No transactions found for the user.");

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K0t2QMPOHJI=",
+  "dgSpecHash": "uzZmgNpijy8=",
   "success": true,
   "projectFilePath": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\BankingApp.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mukul\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Users\\mukul\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\mukul\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\mukul\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.1\\microsoft.extensions.dependencyinjection.abstractions.9.0.1.nupkg.sha512"
   ],
   "logs": []

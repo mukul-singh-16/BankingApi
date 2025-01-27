@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BankingApp.Core.DTOs
 {
-    public class UserRequest
+    public class BalanceRequestDtos
     {
-        public string Name { get; set; }
+        public Guid UserId { get; set; }
+        public decimal Amount { get; set; }
     }
-
 }

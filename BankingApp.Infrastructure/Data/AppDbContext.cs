@@ -8,46 +8,44 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BankingApp.Infrastructure.Data
 {
-    public class BankingAppContext : DbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
-        public BankingAppContext(DbContextOptions<BankingAppContext> options) : base(options)
-        {
-        }
+        
 
-        // DbSets for your entities
+        
         public DbSet<UserEntity> Users { get; set; }
         public DbSet<TransactionEntity> Transactions { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
             base.OnModelCreating(modelBuilder);
 
             
             modelBuilder.Entity<UserEntity>(entity =>
             {
-                entity.HasKey(e => e.Id); // Set Id as the primary key
-                entity.Property(e => e.Name).IsRequired().HasMaxLength(100); // Example constraint on Name
-                entity.Property(e => e.Balance).IsRequired().HasColumnType("decimal(18,2)"); // Configure Balance
+                entity.HasKey(e => e.Id); 
+                entity.Property(e => e.Username).IsRequired().HasMaxLength(100); 
+                entity.Property(e => e.Balance).IsRequired().HasColumnType("decimal(18,2)"); 
             });
 
             
             modelBuilder.Entity<TransactionEntity>(entity =>
             {
-                entity.HasKey(e => e.Id); // Set Id as the primary key
-                entity.Property(e => e.Amount).IsRequired().HasColumnType("decimal(18,2)"); // Configure Amount
-                entity.Property(e => e.Date).IsRequired(); // Date is required
-                entity.Property(e => e.Type).IsRequired().HasMaxLength(50); // Transaction type with max length
+                entity.HasKey(e => e.Id); 
+                entity.Property(e => e.Amount).IsRequired().HasColumnType("decimal(18,2)"); 
+                entity.Property(e => e.Date).IsRequired(); 
+                entity.Property(e => e.Type).IsRequired().HasMaxLength(50); 
 
-                // Relationships
+                
                 entity.HasOne<UserEntity>()
                       .WithMany()
                       .HasForeignKey(e => e.FromUserId)
-                      .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+                      .OnDelete(DeleteBehavior.Restrict); 
 
                 entity.HasOne<UserEntity>()
                       .WithMany()
                       .HasForeignKey(e => e.ToUserId)
-                      .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+                      .OnDelete(DeleteBehavior.Restrict); 
             });
         }
     }

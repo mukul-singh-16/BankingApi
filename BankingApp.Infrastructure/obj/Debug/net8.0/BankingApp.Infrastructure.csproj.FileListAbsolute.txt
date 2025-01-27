@@ -16,3 +16,5 @@ D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\ref\BankingA
 D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Infrastructure.runtimeconfig.json
 D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.genruntimeconfig.cache
 D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\obj\Debug\net8.0\BankingApp.Infrastructure.sourcelink.json
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Application.dll
+D:\dotnet\BankingApp.Api\BankingApp.Infrastructure\bin\Debug\net8.0\BankingApp.Application.pdb

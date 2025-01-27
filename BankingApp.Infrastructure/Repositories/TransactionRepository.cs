@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BankingApp.Application.DTOs;
 using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
 using BankingApp.Infrastructure.Data;
@@ -9,24 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BankingApp.Infrastructure.Repositories
 {
-    public class TransactionRepository : ITransactionRepository
+    public class TransactionRepository(AppDbContext _dbContext) : ITransactionRepository
     {
-        private readonly BankingAppContext _dbContext;
 
-        public TransactionRepository(BankingAppContext dbContext)
+        public async Task<bool> TransferBalanceAsync(UserEntity fromUser, UserEntity toUser, decimal amount)
         {
-            _dbContext = dbContext;
-        }
-
-        public async Task<bool> TransferBalanceAsync(Guid fromUserId, Guid toUserId, decimal amount)
-        {
-            if (amount <= 0) return false;
-
-            var fromUser = await _dbContext.Users.FindAsync(fromUserId);
-            var toUser = await _dbContext.Users.FindAsync(toUserId);
-
-            if (fromUser == null || toUser == null || fromUser.Balance < amount) return false;
-
+            
             try
             {
                 using var transaction = await _dbContext.Database.BeginTransactionAsync();
@@ -37,8 +26,8 @@ namespace BankingApp.Infrastructure.Repositories
                 var transactionLog = new TransactionEntity
                 {
                     Id = Guid.NewGuid(),
-                    FromUserId = fromUserId,  
-                    ToUserId =  toUserId,    
+                    FromUserId = fromUser.Id,  
+                    ToUserId =  toUser.Id,    
                     Amount = amount,
                     Type = "Transfer",
                     Date = DateTime.UtcNow
@@ -60,12 +49,8 @@ namespace BankingApp.Infrastructure.Repositories
         }
 
         
-        public async Task<bool> AddBalanceAsync(Guid userId, decimal amount)
+        public async Task<bool> AddBalanceAsync(UserEntity user, decimal amount)
         {
-            if (amount <= 0) return false;
-
-            var user = await _dbContext.Users.FindAsync(userId);
-            if (user == null) return false;
 
             try
             {
@@ -76,8 +61,8 @@ namespace BankingApp.Infrastructure.Repositories
                 var transactionLog = new TransactionEntity
                 {
                     Id = Guid.NewGuid(),
-                    FromUserId = userId,  
-                    ToUserId = userId,    
+                    FromUserId = user.Id,  
+                    ToUserId = user.Id,    
                     Amount = amount,
                     Type = "Deposit",
                     Date = DateTime.UtcNow
@@ -96,29 +81,22 @@ namespace BankingApp.Infrastructure.Repositories
         }
 
         
-        public async Task<bool> RemoveBalanceAsync(Guid userId, decimal amount)
+        public async Task<bool> RemoveBalanceAsync(UserEntity user, decimal amount)
         {
-            if (amount <= 0) return false;
-
-            var user = await _dbContext.Users.FindAsync(userId);
-            if (user == null || user.Balance < amount) return false;
-
+            
             try
             {
-                // Start a transaction for atomic operation
+                
                 using var transaction = await _dbContext.Database.BeginTransactionAsync();
 
-                Console.WriteLine("remove balance start");
-
-                // Update balance
                 user.Balance -= amount;
 
-                // Log the withdrawal transaction
-                var transactionLog = new TransactionEntity
+
+                TransactionEntity transactionLog = new TransactionEntity
                 {
                     Id = Guid.NewGuid(),
-                    FromUserId = userId,
-                    ToUserId = userId, 
+                    FromUserId = user.Id,
+                    ToUserId = user.Id,
                     Amount = amount,
                     Type = "Withdrawal",
                     Date = DateTime.UtcNow
@@ -126,27 +104,29 @@ namespace BankingApp.Infrastructure.Repositories
 
                 _dbContext.Transactions.Add(transactionLog);
                 await _dbContext.SaveChangesAsync();
-
-                // Commit transaction
                 await transaction.CommitAsync();
                 return true;
             }
             catch (Exception ex)
             {
-                // Log exception if needed (you can use a logging framework here)
+                
                 Console.WriteLine($"Error removing balance: {ex.Message}");
                 return false;
             }
         }
 
-        // Method to get transaction history for a specific user
-        public async Task<IEnumerable<TransactionEntity>> GetTransactionHistoryAsync(Guid userId, int page, int pageSize)
+
+
+
+
+        
+        public async Task<IEnumerable<TransactionEntity>> GetTransactionHistoryAsync(Guid userId, PaginationDtos pagination)
         {
             return await _dbContext.Transactions
                 .Where(t => t.FromUserId == userId || t.ToUserId == userId)
                 .OrderByDescending(t => t.Date)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
+                .Skip((pagination.page - 1) * pagination.pageSize)
+                .Take(pagination.pageSize)
                 .ToListAsync();
         }
 

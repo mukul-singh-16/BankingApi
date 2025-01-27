@@ -5,9 +5,9 @@ namespace BankingApp.Api
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddAppDI(this IServiceCollection services, ConfigurationManager configuration)
+        public static IServiceCollection AddAppDI(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddApplicationDI().AddInfrastructureDI();
+            services.AddApplicationDI().AddInfrastructureDI(configuration);
             return services;
         }
     }

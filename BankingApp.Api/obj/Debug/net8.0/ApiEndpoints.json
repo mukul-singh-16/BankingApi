@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "BankingApp.Api.Controllers.TransactionController",
+    "Method": "Hello",
+    "RelativePath": "api/Transaction",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
     "Method": "GetTransactionHistory",
     "RelativePath": "api/Transaction/{userId}/history",
     "HttpMethod": "GET",
@@ -34,14 +44,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "amount",
-        "Type": "System.Decimal",
-        "IsRequired": false
+        "Name": "body",
+        "Type": "BankingApp.Core.DTOs.BalanceRequestDtos",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -55,14 +60,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "amount",
-        "Type": "System.Decimal",
-        "IsRequired": false
+        "Name": "body",
+        "Type": "BankingApp.Core.DTOs.BalanceRequestDtos",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -76,19 +76,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "fromUserId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "toUserId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "amount",
-        "Type": "System.Decimal",
-        "IsRequired": false
+        "Name": "body",
+        "Type": "BankingApp.Core.DTOs.TransferBalanceDtos",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -100,7 +90,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -113,7 +114,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "BankingApp.Core.DTOs.UserRequest",
+        "Type": "BankingApp.Core.DTOs.UserRequestDtos",
         "IsRequired": true
       }
     ],
@@ -122,13 +123,13 @@
   {
     "ContainingType": "BankingApp.Api.Controllers.UsersController",
     "Method": "GetUserByIdAsync",
-    "RelativePath": "api/Users/{id}",
+    "RelativePath": "api/Users/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "userId",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -138,19 +139,19 @@
   {
     "ContainingType": "BankingApp.Api.Controllers.UsersController",
     "Method": "UpdateUserAsync",
-    "RelativePath": "api/Users/{id}",
+    "RelativePath": "api/Users/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "userId",
         "Type": "System.Guid",
         "IsRequired": true
       },
       {
         "Name": "user",
-        "Type": "BankingApp.Core.DTOs.UserRequest",
+        "Type": "BankingApp.Core.DTOs.UserRequestDtos",
         "IsRequired": true
       }
     ],
@@ -159,13 +160,13 @@
   {
     "ContainingType": "BankingApp.Api.Controllers.UsersController",
     "Method": "DeleteUserAsync",
-    "RelativePath": "api/Users/{id}",
+    "RelativePath": "api/Users/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "userId",
         "Type": "System.Guid",
         "IsRequired": true
       }

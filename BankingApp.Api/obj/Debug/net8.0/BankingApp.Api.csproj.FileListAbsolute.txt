@@ -178,4 +178,8 @@ D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\obj\Debug\net8.0\BankingApp.Api.sourcelink.json
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\MediatR.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\FluentValidation.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

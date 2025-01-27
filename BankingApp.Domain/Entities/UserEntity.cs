@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankingApp.Core.Entities
+﻿namespace BankingApp.Core.Entities
 {
     public class UserEntity
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public decimal Balance { get; set; }
+        //public Guid Guid { get; }
+        //public int V { get; }
 
-
-        public UserEntity(Guid Id , string Name , decimal Balance) {
-            this.Id = Id;
-            this.Name = Name;   
-            this.Balance = Balance; 
-
+        public UserEntity(Guid id, string username,string password, decimal balance)
+        {
+            Id = id;
+            Username = username;
+            Balance = balance;
+            Password = password;
         }
-        
-        
+
+       
     }
 }

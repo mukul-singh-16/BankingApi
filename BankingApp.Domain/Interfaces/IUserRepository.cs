@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BankingApp.Application.DTOs;
 using BankingApp.Core.DTOs;
 using BankingApp.Core.Entities;
 
@@ -10,15 +6,11 @@ namespace BankingApp.Core.Interfaces
 {
     public interface IUserRepository
     {
-        Task<IEnumerable<UserDto>> GetUsers();
+        Task<IEnumerable<UserEntity>> GetUsers( PaginationDtos req);
         Task<UserEntity> GetUsersByIdAsync(Guid id);
-        Task<UserEntity> AddUserAsync(UserRequest newUser);
-        Task<UserEntity> UpdateUserAsync(Guid userId, UserRequest updatedUser);
-        Task<bool> DeleteUserAsync(Guid userId);
-
-        
-
-
-
+        Task<UserEntity> AddUserAsync(UserRequestDtos req);
+        Task<UserEntity> UpdateUserAsync(UserEntity user , UserRequestDtos updatedUser);
+        Task<bool> DeleteUserAsync(UserEntity user);
+        //Task<UserEntity> UpdateUserAsync(UserEntity user, object updatedUser);
     }
 }

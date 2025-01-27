@@ -8,12 +8,15 @@ namespace BankingApp.Core.DTOs
 {
     public class UserDto
     {
-        public string Name { get; set; }
+        public Guid Id { get; set; }
+        public string Username { get; set; }
 
 
-        public UserDto(string Name)
+        public UserDto(Guid id , string username)
         {
-            this.Name = Name;
+            this.Id = id;
+
+            this.Username = username;
         }
     }
 }

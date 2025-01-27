@@ -3,52 +3,84 @@
   "WorkspaceRootPath": "D:\\dotnet\\BankingApp.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\commands\\addbalancecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\commands\\addbalancecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\commands\\removebalancecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\commands\\removebalancecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\commands\\deleteusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\commands\\deleteusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\commands\\addusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\commands\\addusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|Solution Items{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|D:\\dotnet\\BankingApp.Api\\TextFile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|Solution Items{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|solutionrelative:TextFile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\bankingapp.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\bankingapp.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\entities\\transactionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\entities\\transactionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\queries\\getalluserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\queries\\getalluserquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\bankingapp.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\bankingapp.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\queries\\gettransactionhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\queries\\gettransactionhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\queries\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\queries\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\paginationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\paginationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -57,6 +89,70 @@
     {
       "AbsoluteMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.api\\bankingapp.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{0C3A75EB-0AB9-4860-99C0-DBE1B14FA809}|BankingApp.Api\\BankingApp.Api.csproj|solutionrelative:bankingapp.api\\bankingapp.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\bankingapp.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\bankingapp.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\commands\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\commands\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\userrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\userrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\commands\\transferbalancecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\commands\\transferbalancecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\transferbalancedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\transferbalancedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\dtos\\balancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\dtos\\balancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.domain\\bankingapp.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8F5FD2CA-1C2E-43FE-94BB-B698501042C2}|BankingApp.Domain\\BankingApp.Core.csproj|solutionrelative:bankingapp.domain\\bankingapp.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D7F386A-372F-4CF5-A1EE-327104FCC740}|BankingApp.Application\\BankingApp.Application.csproj|solutionrelative:bankingapp.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|Solution Items{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|D:\\dotnet\\BankingApp.Api\\TextFile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|Solution Items{862DFC8A-4AD4-4072-82F9-82BD15A3A6C2}|solutionrelative:TextFile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|d:\\dotnet\\bankingapp.api\\bankingapp.infrastructure\\migrations\\20250127043649_updatedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E12F0FA-11EB-4B81-84A9-73BB13A59917}|BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj|solutionrelative:bankingapp.infrastructure\\migrations\\20250127043649_updatedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\BankingAppContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingApp.Infrastructure\\Migrations\\BankingAppContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,188 +161,469 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 191,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRequest.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserRequest.cs",
-              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\UserRequest.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserRequest.cs*",
-              "RelativeToolTip": "BankingApp.Domain\\DTOs\\UserRequest.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RemoveBalanceCommand.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\RemoveBalanceCommand.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Commands\\RemoveBalanceCommand.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\RemoveBalanceCommand.cs",
+              "RelativeToolTip": "BankingApp.Application\\Commands\\RemoveBalanceCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswBMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:29:47.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TextFile1.txt",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\TextFile1.txt",
-              "RelativeDocumentMoniker": "TextFile1.txt",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\TextFile1.txt",
-              "RelativeToolTip": "TextFile1.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-23T05:43:05.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\UserDto.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "BankingApp.Domain\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T05:32:23.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BankingApp.Core",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\BankingApp.Core.csproj",
-              "RelativeDocumentMoniker": "BankingApp.Domain\\BankingApp.Core.csproj",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\BankingApp.Core.csproj",
-              "RelativeToolTip": "BankingApp.Domain\\BankingApp.Core.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-23T05:31:20.6Z",
+              "WhenOpened": "2025-01-25T09:58:39.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Repositories\\UserRepository.cs*",
-              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\UserRepository.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwDIAAAApAAAAAAAAAA==",
+              "Title": "AddBalanceCommand.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\AddBalanceCommand.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Commands\\AddBalanceCommand.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\AddBalanceCommand.cs",
+              "RelativeToolTip": "BankingApp.Application\\Commands\\AddBalanceCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T05:29:22.095Z",
+              "WhenOpened": "2025-01-24T18:12:14.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "BankingApp.Api\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "BankingApp.Api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAeAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AddUserCommand.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\AddUserCommand.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Commands\\AddUserCommand.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\AddUserCommand.cs",
+              "RelativeToolTip": "BankingApp.Application\\Commands\\AddUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T05:29:00.13Z",
+              "WhenOpened": "2025-01-26T05:22:11.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteUserCommand.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\DeleteUserCommand.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Commands\\DeleteUserCommand.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\DeleteUserCommand.cs",
+              "RelativeToolTip": "BankingApp.Application\\Commands\\DeleteUserCommand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA7wBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:32:59.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "BankingApp.Api\\DependencyInjection.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\DependencyInjection.cs",
-              "RelativeToolTip": "BankingApp.Api\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T05:25:56.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ITransactionRepository.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
-              "RelativeDocumentMoniker": "BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
-              "RelativeToolTip": "BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T17:20:08.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "TransactionRepository.cs",
               "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Repositories\\TransactionRepository.cs",
               "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\TransactionRepository.cs",
               "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Repositories\\TransactionRepository.cs",
               "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\TransactionRepository.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAkwJYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwGQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:49:30.871Z",
+              "WhenOpened": "2025-01-23T11:06:13.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "BankingApp.Domain\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "BankingApp.Domain\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:44:01.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Program.cs",
-              "RelativeDocumentMoniker": "BankingApp.Api\\Program.cs",
-              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Program.cs",
-              "RelativeToolTip": "BankingApp.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:16:37.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "TransactionController.cs",
               "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Controllers\\TransactionController.cs",
               "RelativeDocumentMoniker": "BankingApp.Api\\Controllers\\TransactionController.cs",
               "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Controllers\\TransactionController.cs",
               "RelativeToolTip": "BankingApp.Api\\Controllers\\TransactionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAA3wDsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:12:18.1Z",
+              "WhenOpened": "2025-01-26T07:06:18.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T04:53:24.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITransactionRepository.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
+              "RelativeToolTip": "BankingApp.Domain\\Interfaces\\ITransactionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T13:39:17.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "BankingApp.Api\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "BankingApp.Api\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwCUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T12:08:01.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransactionEntity.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Entities\\TransactionEntity.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\Entities\\TransactionEntity.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Entities\\TransactionEntity.cs",
+              "RelativeToolTip": "BankingApp.Domain\\Entities\\TransactionEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T07:28:58.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetAllUserQuery.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Queries\\GetAllUserQuery.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Queries\\GetAllUserQuery.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Queries\\GetAllUserQuery.cs",
+              "RelativeToolTip": "BankingApp.Application\\Queries\\GetAllUserQuery.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T06:40:03.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\Entities\\UserEntity.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "BankingApp.Domain\\Entities\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T13:08:30.19Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "BankingApp.Application.csproj",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\BankingApp.Application.csproj",
+              "RelativeDocumentMoniker": "BankingApp.Application\\BankingApp.Application.csproj",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\BankingApp.Application.csproj",
+              "RelativeToolTip": "BankingApp.Application\\BankingApp.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-23T17:42:57.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetTransactionHistoryQuery.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Queries\\GetTransactionHistoryQuery.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Queries\\GetTransactionHistoryQuery.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Queries\\GetTransactionHistoryQuery.cs",
+              "RelativeToolTip": "BankingApp.Application\\Queries\\GetTransactionHistoryQuery.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T12:43:40.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetUserByIdQuery.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Queries\\GetUserByIdQuery.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Queries\\GetUserByIdQuery.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Queries\\GetUserByIdQuery.cs",
+              "RelativeToolTip": "BankingApp.Application\\Queries\\GetUserByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T12:46:52.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\UserDto.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "BankingApp.Domain\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:17:39.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PaginationDtos.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\PaginationDtos.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\PaginationDtos.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\PaginationDtos.cs",
+              "RelativeToolTip": "BankingApp.Domain\\DTOs\\PaginationDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T06:44:00.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABMAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T21:31:54.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:23:31.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "BankingApp.Api\\appsettings.json",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\appsettings.json",
+              "RelativeToolTip": "BankingApp.Api\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-27T04:42:07.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BankingApp.Api\\Properties\\launchSettings.json",
               "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\Properties\\launchSettings.json",
               "RelativeToolTip": "BankingApp.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-22T10:13:10.307Z"
+              "WhenOpened": "2025-01-27T04:42:50.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "BankingApp.Api",
               "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\BankingApp.Api.csproj",
               "RelativeDocumentMoniker": "BankingApp.Api\\BankingApp.Api.csproj",
               "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Api\\BankingApp.Api.csproj",
               "RelativeToolTip": "BankingApp.Api\\BankingApp.Api.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-22T10:13:01.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T04:42:45.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BankingApp.Infrastructure.csproj",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj",
+              "RelativeToolTip": "BankingApp.Infrastructure\\BankingApp.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-27T04:38:26.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20250127043649_UpdateDB.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250127043649_UpdateDB.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Migrations\\20250127043649_UpdateDB.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250127043649_UpdateDB.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Migrations\\20250127043649_UpdateDB.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T04:36:49.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UpdateUserCommand.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\UpdateUserCommand.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Commands\\UpdateUserCommand.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\UpdateUserCommand.cs",
+              "RelativeToolTip": "BankingApp.Application\\Commands\\UpdateUserCommand.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAIAwwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T09:42:33.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "BankingApp.Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T12:57:32.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserRequestDtos.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserRequestDtos.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\UserRequestDtos.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\UserRequestDtos.cs",
+              "RelativeToolTip": "BankingApp.Domain\\DTOs\\UserRequestDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:17:36.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TransferBalanceCommand.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\TransferBalanceCommand.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Commands\\TransferBalanceCommand.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\Commands\\TransferBalanceCommand.cs",
+              "RelativeToolTip": "BankingApp.Application\\Commands\\TransferBalanceCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:09:28.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TransferBalanceDtos.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\TransferBalanceDtos.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\TransferBalanceDtos.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\TransferBalanceDtos.cs",
+              "RelativeToolTip": "BankingApp.Domain\\DTOs\\TransferBalanceDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:24:47.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BalanceRequestDtos.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\BalanceRequestDtos.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\DTOs\\BalanceRequestDtos.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\DTOs\\BalanceRequestDtos.cs",
+              "RelativeToolTip": "BankingApp.Domain\\DTOs\\BalanceRequestDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T06:47:47.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BankingApp.Core.csproj",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\BankingApp.Core.csproj",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\BankingApp.Core.csproj",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Domain\\BankingApp.Core.csproj",
+              "RelativeToolTip": "BankingApp.Domain\\BankingApp.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-26T05:08:33.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\DependencyInjection.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "BankingApp.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T06:00:56.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TextFile1.txt",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\TextFile1.txt",
+              "RelativeDocumentMoniker": "TextFile1.txt",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\TextFile1.txt",
+              "RelativeToolTip": "TextFile1.txt",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-25T11:47:22.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20250121164830_user_database_created.Designer.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.Designer.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.Designer.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.Designer.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T07:02:11.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "BankingAppContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\BankingAppContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Migrations\\BankingAppContextModelSnapshot.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\BankingAppContextModelSnapshot.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Migrations\\BankingAppContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T07:01:59.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20250122054614_transaction_table_added.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T07:01:56.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "20250121164830_user_database_created.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Migrations\\20250121164830_user_database_created.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T07:01:52.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20250122054614_transaction_table_added.Designer.cs",
+              "DocumentMoniker": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.Designer.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.Designer.cs",
+              "ToolTip": "D:\\dotnet\\BankingApp.Api\\BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.Designer.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Migrations\\20250122054614_transaction_table_added.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T07:01:14.113Z"
             }
           ]
         }
