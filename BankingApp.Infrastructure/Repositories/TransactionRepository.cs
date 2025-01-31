@@ -52,8 +52,8 @@ namespace BankingApp.Infrastructure.Repositories
         public async Task<bool> AddBalanceAsync(UserEntity user, decimal amount)
         {
 
-            try
-            {
+            //try
+            //{
                 using var transaction = await _dbContext.Database.BeginTransactionAsync();
 
                 user.Balance += amount;
@@ -70,14 +70,15 @@ namespace BankingApp.Infrastructure.Repositories
 
                 _dbContext.Transactions.Add(transactionLog);
                 await _dbContext.SaveChangesAsync();
+
                 await transaction.CommitAsync();
                 return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error adding balance: {ex.Message}");
-                return false;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Error adding balance: {ex.Message}");
+            //    return false;
+            //}
         }
 
         

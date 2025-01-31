@@ -14,3 +14,5 @@ D:\dotnet\BankingApp.Api\BankingApp.Application\obj\Debug\net8.0\refint\BankingA
 D:\dotnet\BankingApp.Api\BankingApp.Application\obj\Debug\net8.0\BankingApp.Application.pdb
 D:\dotnet\BankingApp.Api\BankingApp.Application\obj\Debug\net8.0\ref\BankingApp.Application.dll
 D:\dotnet\BankingApp.Api\BankingApp.Application\obj\Debug\net8.0\BankingApp.Application.sourcelink.json
+D:\dotnet\BankingApp.Api\BankingApp.Application\bin\Debug\net8.0\Microsoft.Azure.Documents.ServiceInterop.dll
+D:\dotnet\BankingApp.Api\BankingApp.Application\bin\Debug\net8.0\Cosmos.CRTCompat.dll

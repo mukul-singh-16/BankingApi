@@ -1,12 +1,15 @@
-﻿using Azure.Core;
-using BankingApp.Application.Commands;
+﻿using BankingApp.Application.Commands;
 using BankingApp.Application.DTOs;
 using BankingApp.Application.Queries;
 using BankingApp.Core.DTOs;
 using BankingApp.Core.Entities;
-using BankingApp.Core.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace BankingApp.Api.Controllers
 {
@@ -14,110 +17,65 @@ namespace BankingApp.Api.Controllers
     [ApiController]
     public class UsersController(ISender sender) : ControllerBase
     {
-        //private readonly IUserRepository _userRepository;
-
-        //public UsersController(IUserRepository userRepository)
-        //{
-        //    Console.WriteLine("users");
-        //    _userRepository = userRepository;
-        //}
-
-
-
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto, CancellationToken cancellationToken)
+        {
+            var token = await sender.Send(new LoginCommand(loginDto), cancellationToken);
+            return Ok(new { Token = token });
+        }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllUsersAsync([FromQuery] int page =1  , [FromQuery] int pageSize = 10)
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetAllUsersAsync([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
+            var users = await sender.Send(new GetAllUserQuery(new PaginationDtos(page, pageSize)));
 
-            if (page <= 0 || pageSize <= 0)
-                throw new Exception(message: "pagination data is incorrect check it again");
+            if (!users.Any())
+                return NotFound("No users found.");
 
-            var users = await sender.Send(new GetAllUserQuery(new PaginationDtos((int)page, (int)pageSize)));
-
-            
             return Ok(users);
         }
 
-
-
-        [HttpGet("{userId}")]
-        public async Task<IActionResult> GetUserByIdAsync([FromRoute] Guid userId)
+        [HttpGet("{userId:guid}")]
+        public async Task<ActionResult<UserDto>> GetUserByIdAsync([FromRoute] Guid userId)
         {
             var user = await sender.Send(new GetUserByIdQuery(userId));
 
             if (user == null)
-            {
                 return NotFound($"User with ID {userId} not found.");
-            }
+
             return Ok(user);
         }
 
-
-
-
-
         [HttpPost]
-        public async Task<IActionResult> AddUserAsync([FromBody] UserRequestDtos user)
+        public async Task<ActionResult<UserEntity>> RegisterUserAsync([FromBody] UserRegisterDto user)
         {
-
-            if (user == null)
-            {
-                return BadRequest("User data cannot be null.");
-            }
-
-            try
-            {
-                var result = await sender.Send(new AddUserCommand(user));
-
-                return Ok(result);
-
-
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error adding user: {ex.Message}");
-            }
+            UserEntity createdUser = await sender.Send(new AddUserCommand(user));
+            return Ok(createdUser);
         }
 
-        
-
-        [HttpPut("{userId:guid}")]
-        public async Task<IActionResult> UpdateUserAsync([FromRoute] Guid userId, [FromBody] UserRequestDtos user)
+        [Authorize]
+        [HttpPut]
+        public async Task<ActionResult<UserEntity>> UpdateUserAsync( [FromBody] UserUpdateDto user)
         {
-            if (user == null)
-            {
-                return BadRequest("User data cannot be null.");
-            }
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
 
-            try
-            {
-                var updatedUser = await sender.Send(new UpdateUserCommand(userId, user));
+            UserEntity updatedUser = await sender.Send(new UpdateUserCommand(currentUserId, user));
 
-                if (updatedUser == null)
-                {
-                    return NotFound($"User with ID {userId} not found.");
-                }
-
-                return Ok(updatedUser);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error updating user: {ex.Message}");
-            }
+            return Ok(updatedUser);
         }
 
-
-        [HttpDelete("{userId:guid}")]
-        public async Task<IActionResult> DeleteUserAsync([FromRoute] Guid userId)
+        [Authorize]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUserAsync()
         {
-            bool result = await sender.Send(new DeleteUserCommand(userId));
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
 
-            if (result)
-            {
-                return NoContent();
-            }
 
-            return NotFound($"User with ID {userId} not found.");
+            bool result = await sender.Send(new DeleteUserCommand(currentUserId));
+
+           
+
+            return NoContent(); 
         }
     }
 }

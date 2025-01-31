@@ -21,6 +21,7 @@ namespace BankingApp.Application.Queries
     {
         public async Task<IEnumerable<UserDto>> Handle(GetAllUserQuery request , CancellationToken cancellationToken)
         {
+
             var allUsers = await userRepository.GetUsers(request.pg);
 
             if (allUsers == null || !allUsers.Any())

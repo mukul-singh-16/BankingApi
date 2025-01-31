@@ -1,4 +1,5 @@
-﻿using BankingApp.Application.Queries;
+﻿using System.ComponentModel;
+using BankingApp.Application.Queries;
 using BankingApp.Core.DTOs;
 using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
@@ -19,12 +20,21 @@ namespace BankingApp.Application.Commands
                 throw new ArgumentException("not a valid input");
             }
 
-            var fromUser = await userRepository.GetUsersByIdAsync(request.Dto.FromUserId);
-            var toUser = await userRepository.GetUsersByIdAsync(request.Dto.ToUserId);
             
 
+            var fromUser = await userRepository.GetUsersByIdAsync(request.Dto.FromUserId);
             if (fromUser == null)
                 throw new ArgumentException("Invalid From User ID");
+
+            var toUser = await userRepository.GetUsersByIdAsync(request.Dto.ToUserId);
+
+
+            if(fromUser.Balance < request.Dto.Amount)
+                throw new ArgumentException("Insufficient balance");
+
+
+
+            
             if (toUser == null)
                 throw new ArgumentException("Invalid To User ID");
 

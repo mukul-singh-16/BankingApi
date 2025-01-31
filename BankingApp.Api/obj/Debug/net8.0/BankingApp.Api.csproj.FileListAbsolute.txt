@@ -183,3 +183,16 @@ D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\FluentValidation.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.Azure.Documents.ServiceInterop.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Cosmos.CRTCompat.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.Azure.DocumentDB.Core.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win7-x64\native\Cosmos.CRTCompat.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win7-x64\native\Microsoft.Azure.Documents.ServiceInterop.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win7-x64\native\msvcp140.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win7-x64\native\vcruntime140.dll
+D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\runtimes\win7-x64\native\vcruntime140_1.dll

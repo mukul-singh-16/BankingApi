@@ -27,23 +27,37 @@ namespace BankingApp.Infrastructure.Repositories
 
 
 
+        public async Task<UserEntity> GetUserByUsernameAsync(string username)
+        {
+            var user = await _dbContext.Users
+                .FirstOrDefaultAsync(u => u.Username == username);
 
-        public async Task<UserEntity> AddUserAsync(UserRequestDtos req)
+            return user;
+        }
+
+
+
+
+
+        public async Task<Guid> AddUserAsync(UserRegisterDto NewUser)
         {
 
-            UserEntity newUser = new UserEntity(Guid.NewGuid(),req.username,req.password,0);
+            Guid userid = Guid.NewGuid();
+            UserEntity newUser = new UserEntity(userid, NewUser.username, NewUser.password,NewUser.emailAddress,0);
             _dbContext.Users.Add(newUser);
             await _dbContext.SaveChangesAsync();
 
-            return await GetUsersByIdAsync(newUser.Id);
+            return userid;
         }
 
 
         
 
-        public async Task<UserEntity> UpdateUserAsync(UserEntity user, UserRequestDtos req)
+        public async Task<UserEntity> UpdateUserAsync(UserEntity user, UserUpdateDto UpdatedUser)
         {
-            user.Username = req.username;
+            user.Password = UpdatedUser.password;
+            user.Email = UpdatedUser.email;
+
             await _dbContext.SaveChangesAsync();
             return user;
         }

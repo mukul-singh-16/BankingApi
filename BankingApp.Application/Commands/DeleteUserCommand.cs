@@ -14,15 +14,7 @@ namespace BankingApp.Application.Commands
         {
             UserEntity user = await userRepository.GetUsersByIdAsync(request.userId);
 
-
-            if (user == null)
-            {
-                
-                throw new KeyNotFoundException($"User with ID {request.userId} does not exist.");
-            }
-
-
-            var result = await userRepository.DeleteUserAsync(user);
+            bool result = await userRepository.DeleteUserAsync(user);
 
             return result;
 

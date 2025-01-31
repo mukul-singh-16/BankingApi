@@ -5,14 +5,20 @@ using MediatR;
 
 namespace BankingApp.Application.Commands
 {
-    public  record AddUserCommand(UserRequestDtos User):IRequest<UserEntity>;
+    public  record AddUserCommand(UserRegisterDto User):IRequest<UserEntity>;
 
 
     public class AddUserCommandHandler(IUserRepository userRepository , IPublisher mediator) : IRequestHandler<AddUserCommand, UserEntity>
     {
         public async Task<UserEntity > Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
-            return await userRepository.AddUserAsync(request.User);
+            Guid id= await userRepository.AddUserAsync(request.User);
+            if (id == Guid.Empty)
+            {
+                throw new ArgumentException(message: "unable to add new user");
+            }
+
+            return await userRepository.GetUsersByIdAsync(id);
             
         }
     }

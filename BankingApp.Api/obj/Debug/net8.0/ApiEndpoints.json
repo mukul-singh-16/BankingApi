@@ -1,42 +1,6 @@
 [
   {
     "ContainingType": "BankingApp.Api.Controllers.TransactionController",
-    "Method": "Hello",
-    "RelativePath": "api/Transaction",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
-    "Method": "GetTransactionHistory",
-    "RelativePath": "api/Transaction/{userId}/history",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
     "Method": "AddBalance",
     "RelativePath": "api/Transaction/add",
     "HttpMethod": "POST",
@@ -47,6 +11,27 @@
         "Name": "body",
         "Type": "BankingApp.Core.DTOs.BalanceRequestDtos",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.TransactionController",
+    "Method": "GetTransactionHistory",
+    "RelativePath": "api/Transaction/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -76,7 +61,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "body",
+        "Name": "transferBalanceDtos",
         "Type": "BankingApp.Core.DTOs.TransferBalanceDtos",
         "IsRequired": true
       }
@@ -102,11 +87,21 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BankingApp.Core.DTOs.UserDto, BankingApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BankingApp.Api.Controllers.UsersController",
-    "Method": "AddUserAsync",
+    "Method": "RegisterUserAsync",
     "RelativePath": "api/Users",
     "HttpMethod": "POST",
     "IsController": true,
@@ -114,10 +109,56 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "BankingApp.Core.DTOs.UserRequestDtos",
+        "Type": "BankingApp.Core.DTOs.UserRegisterDto",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "BankingApp.Core.Entities.UserEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "UpdateUserAsync",
+    "RelativePath": "api/Users",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "BankingApp.Core.DTOs.UserUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BankingApp.Core.Entities.UserEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankingApp.Api.Controllers.UsersController",
+    "Method": "DeleteUserAsync",
+    "RelativePath": "api/Users",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -134,40 +175,29 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BankingApp.Api.Controllers.UsersController",
-    "Method": "UpdateUserAsync",
-    "RelativePath": "api/Users/{userId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+    "ReturnTypes": [
       {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "user",
-        "Type": "BankingApp.Core.DTOs.UserRequestDtos",
-        "IsRequired": true
+        "Type": "BankingApp.Core.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
     "ContainingType": "BankingApp.Api.Controllers.UsersController",
-    "Method": "DeleteUserAsync",
-    "RelativePath": "api/Users/{userId}",
-    "HttpMethod": "DELETE",
+    "Method": "Login",
+    "RelativePath": "api/Users/login",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Guid",
+        "Name": "loginDto",
+        "Type": "BankingApp.Core.DTOs.LoginDto",
         "IsRequired": true
       }
     ],

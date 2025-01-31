@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BankingApp.Core.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System.Data.Common;
+using BankingApp.Infrastructure.Services;
 
 
 namespace BankingApp.Infrastructure
@@ -20,16 +21,12 @@ namespace BankingApp.Infrastructure
                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
             });
 
-            // services.AddDbContext<AppDbContext>(options =>
-            // {
-            //     options.UseNpgsql(
-            //         configuration.GetConnectionString("DefaultConnection"),
-            //         b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName) // Specify the assembly containing the DbContext
-            //     );
-            // });
 
-            services.AddScoped<IUserRepository, UserRepository>(); // Register UserRepository
-            services.AddScoped<ITransactionRepository, TransactionRepository>(); // Register TransactionRepository
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<IJwtService, JwtService>();
+
 
             return services;
         }

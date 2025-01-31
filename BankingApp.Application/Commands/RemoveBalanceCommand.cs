@@ -23,6 +23,10 @@ namespace BankingApp.Application.Commands
 
             var user = await userRepository.GetUsersByIdAsync(request.userId);
 
+            if (user.Balance < request.amount)
+                throw new ArgumentException("Insufficient balance");
+
+
             if (user == null)
                 throw new ArgumentException("Invalid From User ID");
 

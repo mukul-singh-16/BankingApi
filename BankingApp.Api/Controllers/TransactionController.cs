@@ -1,10 +1,12 @@
-﻿using BankingApp.Application.Commands;
+﻿using System.Security.Claims;
+using BankingApp.Application.Commands;
 using BankingApp.Application.DTOs;
 using BankingApp.Application.Queries;
 using BankingApp.
     Core.DTOs;
 using BankingApp.Core.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankingApp.Api.Controllers
@@ -13,73 +15,72 @@ namespace BankingApp.Api.Controllers
     [ApiController]
     public class TransactionController(ISender sender) : ControllerBase
     {
-
-        [HttpGet]
-        public async Task<IActionResult> Hello()
-        {
-            return Ok("hello");
-        }
-
-
-
+        [Authorize]
         [HttpPost("transfer")]
-        public async Task<IActionResult> TransferBalance([FromBody] TransferBalanceDtos body )
+        public async Task<IActionResult> TransferBalance([FromBody] TransferBalanceDtos transferBalanceDtos)
         {
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
+
+            transferBalanceDtos.FromUserId = currentUserId;
+
+            var updatedBalance = await sender.Send(new TransferBalanceCommand(transferBalanceDtos));
+
             
-            var success = await sender.Send( new TransferBalanceCommand(body));
+                return Ok(new { Message = "Transfer successful.", Balance = updatedBalance });
 
-            if (success)
-                return Ok("Transfer successful.");
-
-            return BadRequest("Transfer failed.");
+            
         }
 
 
 
 
-       
+
+        [Authorize]
         [HttpPost("add")]
         public async Task<IActionResult> AddBalance([FromBody] BalanceRequestDtos body)
         {
-            if (body.Amount <= 0)
-                return BadRequest("Amount must be greater than zero.");
+            var updatedBalance = await sender.Send(new AddBalanceCommand(body.UserId, body.Amount));
 
-            bool success = await sender.Send(new RemoveBalanceCommand(body.UserId,body.Amount));
-            if (success)
-                return Ok("Balance added successfully.");
-
-            return BadRequest("Failed to add balance.");
+            return Ok(new { Message = "Balance added successfully.", Balance = updatedBalance });
         }
 
+
+
+
+
+        [Authorize]
         [HttpPost("remove")]
         public async Task<IActionResult> RemoveBalance([FromBody] BalanceRequestDtos body)
         {
-            if (body.Amount <= 0)
-                return BadRequest("Amount must be greater than zero.");
+            var updatedBalance = await sender.Send(new RemoveBalanceCommand(body.UserId, body.Amount));
 
-            var success = await sender.Send(new RemoveBalanceCommand(body.UserId, body.Amount));
-            if (success)
-                return Ok("Balance removed successfully.");
+            
+                return Ok(new { Message = "Balance removed successfully.", Balance = updatedBalance });
 
-            return BadRequest("Failed to remove balance.");
+            
         }
 
 
 
 
-        [HttpGet("{userId}/history")]
-        public async Task<IActionResult> GetTransactionHistory(Guid userId, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        [Authorize]
+        [HttpGet("history")]
+        public async Task<IActionResult> GetTransactionHistory( [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
-            if (page <= 0 || pageSize <= 0)
-                return BadRequest("Page and PageSize must be greater than zero.");
 
-            var transactions = await  sender.Send(new GetTransactionHistoryQuery(userId, new PaginationDtos(page, pageSize)));
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
+
             
+
+            var transactions = await sender.Send(new GetTransactionHistoryQuery(currentUserId, new PaginationDtos(page, pageSize)));
+
             if (!transactions.Any())
                 return NotFound("No transactions found for the user.");
 
             return Ok(transactions);
         }
 
-            }
-        }
+
+    }
+}
+
