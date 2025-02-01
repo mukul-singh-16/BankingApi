@@ -2,9 +2,9 @@
 using BankingApp.Application.Commands;
 using BankingApp.Application.DTOs;
 using BankingApp.Application.Queries;
-using BankingApp.
-    Core.DTOs;
+using BankingApp.Core.DTOs;
 using BankingApp.Core.Interfaces;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +25,6 @@ namespace BankingApp.Api.Controllers
 
             var updatedBalance = await sender.Send(new TransferBalanceCommand(transferBalanceDtos));
 
-            
                 return Ok(new { Message = "Transfer successful.", Balance = updatedBalance });
 
             
@@ -79,7 +78,6 @@ namespace BankingApp.Api.Controllers
 
             return Ok(transactions);
         }
-
 
     }
 }

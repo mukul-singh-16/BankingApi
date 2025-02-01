@@ -2158,6 +2158,7 @@
       },
       "BankingApp.Core/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "FluentValidation.AspNetCore": "11.3.0",
           "MediatR": "12.4.1",
           "Microsoft.Azure.DocumentDB.Core": "2.22.0",

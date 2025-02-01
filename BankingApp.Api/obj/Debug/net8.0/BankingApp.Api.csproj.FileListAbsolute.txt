@@ -182,7 +182,6 @@ D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\MediatR.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\FluentValidation.dll
-D:\dotnet\BankingApp.Api\BankingApp.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Microsoft.Azure.Documents.ServiceInterop.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\Cosmos.CRTCompat.dll
 D:\dotnet\BankingApp.Api\BankingApp.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll

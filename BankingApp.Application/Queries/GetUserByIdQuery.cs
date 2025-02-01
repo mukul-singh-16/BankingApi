@@ -1,31 +1,35 @@
 ﻿using BankingApp.Core.DTOs;
+using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
 using MediatR;
 
 namespace BankingApp.Application.Queries
 {
-    public record GetUserByIdQuery(Guid UserId ) : IRequest<UserDto>;
+    public record GetUserByIdQuery(Guid UserId ) : IRequest<UserProfileDto>;
 
 
     internal class GetUserByIdQueryHandler(IUserRepository userRepository)
-        : IRequestHandler<GetUserByIdQuery, UserDto>
+        : IRequestHandler<GetUserByIdQuery, UserProfileDto>
 
     {
-        public async Task<UserDto> Handle(GetUserByIdQuery request , CancellationToken cancellationToken)
+        public async Task<UserProfileDto> Handle(GetUserByIdQuery request , CancellationToken cancellationToken)
         {
 
-            var user = await userRepository.GetUsersByIdAsync(request.UserId );
+            UserEntity user = await userRepository.GetUsersByIdAsync(request.UserId );
 
             if (user == null)
             {
                 throw new InvalidOperationException("No users are present in the System.");
             }
 
+            UserProfileDto userProfileDto = new UserProfileDto{
+                Id = user.Id,
+                Username =user.Username,
+                Email = user.Email,
+                Balance = user.Balance
+            };
 
-
-            
-
-            return new UserDto(user.Id, user.Username);
+            return userProfileDto;
         }
         
 

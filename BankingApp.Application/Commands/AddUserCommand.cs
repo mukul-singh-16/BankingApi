@@ -2,24 +2,39 @@
 using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace BankingApp.Application.Commands
 {
-    public  record AddUserCommand(UserRegisterDto User):IRequest<UserEntity>;
+    public record AddUserCommand(UserRegisterDto User) : IRequest<UserResponseDto>;
 
-
-    public class AddUserCommandHandler(IUserRepository userRepository , IPublisher mediator) : IRequestHandler<AddUserCommand, UserEntity>
+    public class AddUserCommandHandler(
+        IUserRepository userRepository,
+        IPasswordHasher passwordHasher, // Ensure password is hashed
+        ILogger<AddUserCommandHandler> logger
+    ) : IRequestHandler<AddUserCommand, UserResponseDto>
     {
-        public async Task<UserEntity > Handle(AddUserCommand request, CancellationToken cancellationToken)
+        public async Task<UserResponseDto> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
-            Guid id= await userRepository.AddUserAsync(request.User);
+            // Hash the user's password before saving
+            request.User.password = passwordHasher.HashPassword(request.User.password);
+
+            Guid id = await userRepository.AddUserAsync(request.User);
+
             if (id == Guid.Empty)
             {
-                throw new ArgumentException(message: "unable to add new user");
+                logger.LogError("Failed to add user: {Username}", request.User.username);
+                throw new ApplicationException("Unable to add new user.");
             }
 
-            return await userRepository.GetUsersByIdAsync(id);
-            
+            var user = await userRepository.GetUsersByIdAsync(id);
+
+            return new UserResponseDto
+            {
+                Id = user.Id,
+                Username = user.Username,
+                Email = user.Email
+            };
         }
     }
 }

@@ -22,11 +22,11 @@ namespace BankingApp.Application.Commands
 
             
 
-            var fromUser = await userRepository.GetUsersByIdAsync(request.Dto.FromUserId);
+            UserEntity fromUser = await userRepository.GetUsersByIdAsync(request.Dto.FromUserId);
             if (fromUser == null)
                 throw new ArgumentException("Invalid From User ID");
 
-            var toUser = await userRepository.GetUsersByIdAsync(request.Dto.ToUserId);
+            UserEntity toUser = await userRepository.GetUsersByIdAsync(request.Dto.ToUserId);
 
 
             if(fromUser.Balance < request.Dto.Amount)

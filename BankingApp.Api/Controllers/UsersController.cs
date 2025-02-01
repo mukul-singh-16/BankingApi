@@ -17,11 +17,28 @@ namespace BankingApp.Api.Controllers
     [ApiController]
     public class UsersController(ISender sender) : ControllerBase
     {
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginDto loginDto, CancellationToken cancellationToken)
+
+        [Authorize]
+        [HttpGet("profile")]
+        public async Task<UserProfileDto> GetUserData()
         {
-            var token = await sender.Send(new LoginCommand(loginDto), cancellationToken);
-            return Ok(new { Token = token });
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
+            
+            return await sender.Send (new GetUserByIdQuery(currentUserId));
+             
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginDto loginDto, CancellationToken cancellationToken)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            LoginResponseDto response = await sender.Send(new LoginCommand(loginDto), cancellationToken);
+            
+            return Ok(response);
         }
 
         [HttpGet]
@@ -29,37 +46,56 @@ namespace BankingApp.Api.Controllers
         {
             var users = await sender.Send(new GetAllUserQuery(new PaginationDtos(page, pageSize)));
 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (!users.Any())
                 return NotFound("No users found.");
 
             return Ok(users);
         }
 
-        [HttpGet("{userId:guid}")]
-        public async Task<ActionResult<UserDto>> GetUserByIdAsync([FromRoute] Guid userId)
-        {
-            var user = await sender.Send(new GetUserByIdQuery(userId));
 
-            if (user == null)
-                return NotFound($"User with ID {userId} not found.");
+        // [HttpGet("{userId:guid}")]
+        // public async Task<ActionResult<UserDto>> GetUserByIdAsync([FromRoute] Guid userId)
+        // {
+        //     var user = await sender.Send(new GetUserByIdQuery(userId));
 
-            return Ok(user);
-        }
+        //     if (user == null)
+        //         return NotFound($"User with ID {userId} not found.");
+
+        //     return Ok(user);
+        // }
+
+
 
         [HttpPost]
-        public async Task<ActionResult<UserEntity>> RegisterUserAsync([FromBody] UserRegisterDto user)
+        public async Task<ActionResult<UserResponseDto>> RegisterUserAsync([FromBody] UserRegisterDto user)
         {
-            UserEntity createdUser = await sender.Send(new AddUserCommand(user));
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
+            UserResponseDto createdUser = await sender.Send(new AddUserCommand(user));
             return Ok(createdUser);
         }
 
         [Authorize]
         [HttpPut]
-        public async Task<ActionResult<UserEntity>> UpdateUserAsync( [FromBody] UserUpdateDto user)
+        public async Task<ActionResult<UserResponseDto>> UpdateUserAsync( [FromBody] UserUpdateDto user)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
 
-            UserEntity updatedUser = await sender.Send(new UpdateUserCommand(currentUserId, user));
+            UserResponseDto updatedUser = await sender.Send(new UpdateUserCommand(currentUserId, user));
 
             return Ok(updatedUser);
         }
@@ -69,12 +105,7 @@ namespace BankingApp.Api.Controllers
         public async Task<IActionResult> DeleteUserAsync()
         {
             Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
-
-
             bool result = await sender.Send(new DeleteUserCommand(currentUserId));
-
-           
-
             return NoContent(); 
         }
     }

@@ -5,23 +5,28 @@ using MediatR;
 
 namespace BankingApp.Application.Commands
 {
-    public  record UpdateUserCommand(Guid userId , UserUpdateDto updatedUser) :IRequest<UserEntity>;
+    public  record UpdateUserCommand(Guid userId , UserUpdateDto updatedUser) :IRequest<UserResponseDto>;
 
 
-    public class UpdateUserCommandHandler(IUserRepository userRepository, IPublisher mediator) : IRequestHandler<UpdateUserCommand, UserEntity>
+    public class UpdateUserCommandHandler(IUserRepository userRepository, IPublisher mediator) : IRequestHandler<UpdateUserCommand, UserResponseDto>
     {
         
 
-        public async Task<UserEntity> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
+        public async Task<UserResponseDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
 
             UserEntity user = await userRepository.GetUsersByIdAsync(request.userId);
             
 
-            return await userRepository.UpdateUserAsync(user , request.updatedUser);
+            user =await userRepository.UpdateUserAsync(user , request.updatedUser);
 
-            //await mediator.Publish(new UserCreatedEvent(user.Id));
-            //return user;
+            UserResponseDto userResponseDto = new UserResponseDto{
+                Id=user.Id,
+                Email=user.Email,
+                Username= user.Username
+            };
+
+            return userResponseDto;
         }
     }
 }

@@ -52,4 +52,39 @@ namespace BankingApp.Core.DTOs
 
 
 
+    public class LoginResponseDto
+    {
+        public Guid Id {get; set;}
+        public string Token { get; set; }
+        public string Username { get; set; }
+        public decimal Balance {get; set;}
+
+    }
+
+
+    public class UserResponseDto
+    {
+        public Guid Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+
+        
+        
+    }
+
+
+    public class UserProfileDto
+    {
+        public Guid Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+
+        public decimal Balance {get; set;}
+
+    }
+
+
+
+
+
 }

@@ -16,7 +16,7 @@ namespace BankingApp.Application.Commands
                 throw new ArgumentException("not a valid input");
             }
 
-            var user = await userRepository.GetUsersByIdAsync(request.userId);
+            UserEntity user = await userRepository.GetUsersByIdAsync(request.userId);
 
             if (user==null)
                 throw new ArgumentException("Invalid From User ID");
