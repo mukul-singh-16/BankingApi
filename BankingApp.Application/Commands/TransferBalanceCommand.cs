@@ -7,7 +7,7 @@ using MediatR;
 
 namespace BankingApp.Application.Commands
 {
-    public  record TransferBalanceCommand(TransferBalanceDtos Dto):IRequest<bool>;
+    public  record TransferBalanceCommand(Guid FromUserId ,TransferBalanceDtos Dto):IRequest<bool>;
 
 
     public class TransferBalanceCommandHandler(ITransactionRepository transactionRepository , IUserRepository userRepository ) : IRequestHandler< TransferBalanceCommand, bool>
@@ -15,14 +15,14 @@ namespace BankingApp.Application.Commands
         public async Task<bool > Handle(TransferBalanceCommand request, CancellationToken cancellationToken)
         {
     
-            if (request.Dto.FromUserId == Guid.Empty || request.Dto.ToUserId == Guid.Empty || request.Dto.Amount <= 0)
+            if (request.FromUserId == Guid.Empty || request.Dto.ToUserId == Guid.Empty || request.Dto.Amount <= 0)
             {
                 throw new ArgumentException("not a valid input");
             }
 
             
 
-            UserEntity fromUser = await userRepository.GetUsersByIdAsync(request.Dto.FromUserId);
+            UserEntity fromUser = await userRepository.GetUsersByIdAsync(request.FromUserId);
             if (fromUser == null)
                 throw new ArgumentException("Invalid From User ID");
 

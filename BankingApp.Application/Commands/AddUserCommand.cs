@@ -2,6 +2,8 @@
 using BankingApp.Core.Entities;
 using BankingApp.Core.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.Azure.Documents;
 using Microsoft.Extensions.Logging;
 
 namespace BankingApp.Application.Commands
@@ -10,12 +12,17 @@ namespace BankingApp.Application.Commands
 
     public class AddUserCommandHandler(
         IUserRepository userRepository,
-        IPasswordHasher passwordHasher, // Ensure password is hashed
+        IPasswordHasher passwordHasher, 
         ILogger<AddUserCommandHandler> logger
     ) : IRequestHandler<AddUserCommand, UserResponseDto>
     {
         public async Task<UserResponseDto> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
+
+            if(userRepository.GetUserByUsernameAsync(request.User.username) !=null  )
+            {
+                throw new InvalidOperationException("Username is already taken.");
+            }
             // Hash the user's password before saving
             request.User.password = passwordHasher.HashPassword(request.User.password);
 

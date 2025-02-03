@@ -21,11 +21,9 @@ namespace BankingApp.Api.Controllers
         {
             Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
 
-            transferBalanceDtos.FromUserId = currentUserId;
+            var updatedBalance = await sender.Send(new TransferBalanceCommand(currentUserId,transferBalanceDtos));
 
-            var updatedBalance = await sender.Send(new TransferBalanceCommand(transferBalanceDtos));
-
-                return Ok(new { Message = "Transfer successful.", Balance = updatedBalance });
+                return Ok(new { Message = "Transfer successful." });
 
             
         }
@@ -38,9 +36,12 @@ namespace BankingApp.Api.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> AddBalance([FromBody] BalanceRequestDtos body)
         {
-            var updatedBalance = await sender.Send(new AddBalanceCommand(body.UserId, body.Amount));
 
-            return Ok(new { Message = "Balance added successfully.", Balance = updatedBalance });
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
+            
+            var updatedBalance = await sender.Send(new AddBalanceCommand(currentUserId, body.Amount));
+
+            return Ok(new { Message = "Balance added successfully." });
         }
 
 
@@ -51,10 +52,12 @@ namespace BankingApp.Api.Controllers
         [HttpPost("remove")]
         public async Task<IActionResult> RemoveBalance([FromBody] BalanceRequestDtos body)
         {
-            var updatedBalance = await sender.Send(new RemoveBalanceCommand(body.UserId, body.Amount));
+            Guid currentUserId = Guid.Parse(User.FindFirstValue("Id"));
+
+            var updatedBalance = await sender.Send(new RemoveBalanceCommand(currentUserId, body.Amount));
 
             
-                return Ok(new { Message = "Balance removed successfully.", Balance = updatedBalance });
+                return Ok(new { Message = "Balance removed successfully."});
 
             
         }

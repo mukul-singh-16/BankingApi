@@ -49,7 +49,7 @@ namespace BankingApp.Api
                 app.UseSwaggerUI();
             }
 
-            app.UseAuthentication(); // Ensure authentication is applied
+            app.UseAuthentication(); 
             app.UseAuthorization();
 
             app.MapControllers();

@@ -8,7 +8,6 @@ namespace BankingApp.Core.DTOs
 {
     public class BalanceRequestDtos
     {
-        public Guid UserId { get; set; }
         public decimal Amount { get; set; }
     }
 }

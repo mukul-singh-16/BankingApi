@@ -8,7 +8,7 @@ namespace BankingApp.Core.DTOs
 {
     public class TransferBalanceDtos
     {
-        public Guid FromUserId { get; set; }
+        
         public Guid ToUserId { get; set; }
         public decimal Amount { get; set; }
 

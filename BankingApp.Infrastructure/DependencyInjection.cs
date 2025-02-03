@@ -27,6 +27,7 @@ namespace BankingApp.Infrastructure
             services.AddScoped<ITransactionRepository, TransactionRepository>();
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IPasswordHasher,BcryptPasswordHasher>();
+            // services.AddScoped<>
 
 
             return services;

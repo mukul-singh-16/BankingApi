@@ -29,10 +29,21 @@ namespace BankingApp.Infrastructure.Repositories
 
         public async Task<UserEntity> GetUserByUsernameAsync(string username)
         {
-            return await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username) ;
 
             
         }
+
+
+
+  
+        public async Task<bool> CheckUniqueUsername(string username)
+        {
+            return await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username)==null ;
+
+            
+        }
+
 
 
 

@@ -9,6 +9,8 @@ namespace BankingApp.Core.Interfaces
         Task<IEnumerable<UserEntity>> GetUsers( PaginationDtos req);
         Task<UserEntity> GetUsersByIdAsync(Guid id);
         Task<UserEntity> GetUserByUsernameAsync(string username);
+
+        Task<bool> CheckUniqueUsername(string username);
         Task<Guid> AddUserAsync(UserRegisterDto req);
         
         Task<UserEntity> UpdateUserAsync(UserEntity user , UserUpdateDto updatedUser);
